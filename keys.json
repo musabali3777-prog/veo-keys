@@ -11,6 +11,12 @@
       "expires": "2026-05-17T10:58:38Z",
       "duration": "1min",
       "active": false
+    },
+    "VEO-DGDD-0RR5-MFEP": {
+      "created": "2026-05-17T11:00:06Z",
+      "expires": "2026-05-18T11:00:06Z",
+      "duration": "1day",
+      "active": true
     }
   }
 }
