@@ -454,9 +454,26 @@
 
         async function pushToGithub() {
             const cfg = getConfig();
-            const content = btoa(JSON.stringify(keysData, null, 2));
             const url = `https://api.github.com/repos/${cfg.repo}/contents/keys.json`;
 
+            // ALWAYS fetch the latest SHA right before pushing to prevent 409 Conflicts
+            try {
+                const getRes = await fetch(url + `?ref=${cfg.branch}`, {
+                    headers: {
+                        'Authorization': `token ${cfg.token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Cache-Control': 'no-cache'
+                    }
+                });
+                if (getRes.ok) {
+                    const getData = await getRes.json();
+                    fileSha = getData.sha;
+                } else if (getRes.status === 404) {
+                    fileSha = null;
+                }
+            } catch (e) {}
+
+            const content = btoa(JSON.stringify(keysData, null, 2));
             const body = {
                 message: `Update keys — ${new Date().toISOString()}`,
                 content: content,
@@ -474,7 +491,7 @@
                 body: JSON.stringify(body)
             });
 
-            if (!res.ok) throw new Error(`Push failed: ${res.status}`);
+            if (!res.ok) throw new Error(`Push failed: ${res.status} (Make sure your token has 'repo' permissions)`);
 
             const data = await res.json();
             fileSha = data.content.sha;
