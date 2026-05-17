@@ -35,6 +35,12 @@
       "expires": "2026-05-17T11:20:47Z",
       "duration": "1min",
       "active": false
+    },
+    "VEO-YS2B-TIR0-6CZ3": {
+      "created": "2026-05-17T11:20:15Z",
+      "expires": "2026-06-16T11:20:15Z",
+      "duration": "1month",
+      "active": true
     }
   }
 }
