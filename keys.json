@@ -59,6 +59,12 @@
       "expires": "2027-05-17T11:25:39Z",
       "duration": "1year",
       "active": true
+    },
+    "VEO-W1CD-SW6H-PQSL": {
+      "created": "2026-05-17T12:01:50Z",
+      "expires": "2026-05-18T12:01:50Z",
+      "duration": "1day",
+      "active": true
     }
   }
 }
