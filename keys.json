@@ -46,7 +46,7 @@
       "created": "2026-05-17T11:21:22Z",
       "expires": "2026-05-24T11:21:22Z",
       "duration": "1week",
-      "active": true
+      "active": false
     }
   }
 }
