@@ -1,3 +1,10 @@
 {
-  "keys": {}
+  "keys": {
+    "VEO-Z88Q-W235-WCJ4": {
+      "created": "2026-05-17T10:57:37Z",
+      "expires": "2026-05-17T10:58:37Z",
+      "duration": "1min",
+      "active": true
+    }
+  }
 }
