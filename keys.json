@@ -41,6 +41,12 @@
       "expires": "2026-06-16T11:20:15Z",
       "duration": "1month",
       "active": false
+    },
+    "VEO-TVH0-R6ZX-7HMH": {
+      "created": "2026-05-17T11:21:22Z",
+      "expires": "2026-05-24T11:21:22Z",
+      "duration": "1week",
+      "active": true
     }
   }
 }
